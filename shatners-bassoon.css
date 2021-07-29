@@ -1,0 +1,492 @@
+/*
+ * Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*************************** The Actual CSS *****************************************/
+
+h1 {
+  font-size: 10rem;
+  display: inline-grid;
+  border: 0.5em solid #fb3640;
+  place-content: center;
+  font-weight: 700;
+  border-radius: 3rem;
+  padding: 3rem;
+}
+/*needs a media query for smaller screens */
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 5%;
+}
+
+#main h2 {
+  background-color: #542e71;
+  align-self: center;
+  color: #fdca40;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 1rem;
+}
+
+article {
+  padding: 0;
+}
+
+a {
+  color: #845fff;
+  border-radius: 3rem;
+}
+
+blockquote {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 3rem 0;
+  border: 0.5em solid #fb3640;
+  place-content: center;
+  padding: 1rem;
+  border-radius: 3rem;
+  color: #fb3640;
+}
+
+body {
+  background-color: #fdca40;
+  color: #542e71;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+}
+
+main {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main:focus {
+  outline: none;
+}
+main h3 {
+  color: #fb3640;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+article .container,
+.page-footer .container,
+#styles .container {
+  width: 100%;
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article,
+#styles {
+  padding: 1rem;
+}
+
+.page-footer ul,
+.features {
+  display: grid;
+  margin: 0 0 2rem;
+  padding: 0;
+  grid-gap: 1em;
+  list-style: none;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  color: #fb3640;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 750px) {
+  header {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+#about {
+  border: 0.5em solid #fb3640;
+}
+
+#about ul {
+  margin: 0 auto;
+  text-align: center;
+  columns: 3;
+  column-width: 30%;
+}
+
+#about li {
+  list-style: none;
+  background-color: #a799b7;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul a {
+  display: inline-grid;
+  padding: 0.5rem;
+  color: #542e71;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+nav ul a::before {
+  width: 100%;
+  height: 0.33em;
+  background-color: #542e71;
+  opacity: 0.15;
+  content: "";
+  border-radius: 3rem;
+}
+nav ul a:hover::before,
+nav ul a:focus::before {
+  opacity: 1;
+}
+nav ul li {
+  margin: 0.25rem;
+}
+
+#contribute {
+  border: 0.5em solid #fb3640;
+}
+
+#files {
+  display: grid;
+  place-content: center;
+  margin: 5vh auto;
+  text-align: center;
+}
+#files h3 {
+  height: 0;
+  opacity: 0;
+}
+#files .container {
+  display: inline-block;
+  padding: 5vmin;
+  outline: 4px dashed #542e71;
+  background-color: #fdca40;
+  text-align: center;
+}
+#files .container a:not(:last-child) {
+  margin: 0.5rem;
+}
+#files .container a:not(:last-child):not(.link-codepen) {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.features {
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+}
+.features li {
+  display: grid;
+  position: relative;
+  place-content: center;
+  min-height: 12rem;
+  padding: 1rem;
+  color: #a799b7;
+  text-align: center;
+}
+.features li > span {
+  display: grid;
+  place-content: center;
+  padding: 0.5em;
+  grid-gap: 0.5rem;
+  border: 1px solid #a799b7;
+  background-color: #542e71;
+  line-height: 1.1;
+}
+.features li > span a {
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-strong);
+  text-decoration: none;
+}
+.features li > span a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.features li > span span:nth-child(2) {
+  position: relative;
+}
+
+#styles {
+  margin: 5vh 0 20vh;
+  text-align: center;
+}
+#styles h2 {
+  color: #fb3640;
+}
+
+#styles .features li,
+.features.patterned li {
+  border-radius: 3rem;
+  background-color: #542e71;
+  background-size: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M304 280h416c4.4 0 8-3.6 8-8 0-40-8.8-76.7-25.9-108.1-17.2-31.5-42.5-56.8-74-74C596.7 72.8 560 64 520 64h-16c-40 0-76.7 8.8-108.1 25.9-31.5 17.2-56.8 42.5-74 74C304.8 195.3 296 232 296 272c0 4.4 3.6 8 8 8z'/%3E%3Cpath d='M940 512H792V412c76.8 0 139-62.2 139-139 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 34.8-28.2 63-63 63H232c-34.8 0-63-28.2-63-63 0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8 0 76.8 62.2 139 139 139v100H84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h148v96c0 6.5.2 13 .7 19.3C164.1 728.6 116 796.7 116 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-44.2 23.9-82.9 59.6-103.7 6 17.2 13.6 33.6 22.7 49 24.3 41.5 59 76.2 100.5 100.5 28.9 16.9 61 28.8 95.3 34.5 4.4 0 8-3.6 8-8V484c0-4.4 3.6-8 8-8h60c4.4 0 8 3.6 8 8v464.2c0 4.4 3.6 8 8 8 34.3-5.7 66.4-17.6 95.3-34.5 41.5-24.3 76.2-59 100.5-100.5 9.1-15.5 16.7-31.9 22.7-49C812.1 793.1 836 831.8 836 876c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8 0-79.3-48.1-147.4-116.7-176.7.4-6.4.7-12.8.7-19.3v-96h148c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z'/%3E%3C/svg%3E");
+}
+@media (min-width: 515px) and (max-width: 765px) {
+  #styles .features li:nth-last-child(1):nth-child(odd),
+  .features.patterned li:nth-last-child(1):nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+#styles .features li:nth-child(2),
+.features.patterned li:nth-child(2) {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' standalone='no'%3F%3E%3Csvg width='1024px' height='1024px' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' class='icon'%3E%3Cpath d='M899.6 276.5L705 396.4 518.4 147.5a8.06 8.06 0 0 0-12.9 0L319 396.4 124.3 276.5c-5.7-3.5-13.1 1.2-12.2 7.9L188.5 865c1.1 7.9 7.9 14 16 14h615.1c8 0 14.9-6 15.9-14l76.4-580.6c.8-6.7-6.5-11.4-12.3-7.9zM512 734.2c-62.1 0-112.6-50.5-112.6-112.6S449.9 509 512 509s112.6 50.5 112.6 112.6S574.1 734.2 512 734.2zm0-160.9c-26.6 0-48.2 21.6-48.2 48.3 0 26.6 21.6 48.3 48.2 48.3s48.2-21.6 48.2-48.3c0-26.6-21.6-48.3-48.2-48.3z'/%3E%3C/svg%3E%0A");
+}
+#styles .features li:nth-child(3),
+.features.patterned li:nth-child(3) {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' standalone='no'%3F%3E%3Csvg width='1024px' height='1024px' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' class='icon'%3E%3Cpath d='M816 768h-24V428c0-141.1-104.3-257.8-240-277.2V112c0-22.1-17.9-40-40-40s-40 17.9-40 40v38.8C336.3 170.2 232 286.9 232 428v340h-24c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h216c0 61.8 50.2 112 112 112s112-50.2 112-112h216c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM512 888c-26.5 0-48-21.5-48-48h96c0 26.5-21.5 48-48 48z'/%3E%3C/svg%3E");
+}
+
+.profile {
+  width: 95vw;
+  max-width: 80ch;
+  margin: 1rem auto 10vh;
+  padding: 1.25rem;
+  font-size: 2rem;
+}
+.profile h4 {
+  font-size: 3rem;
+  margin: 0;
+  color: #542e71;
+  text-align: center;
+  font-weight: 500;
+}
+.profile .container {
+  display: grid;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+.profile .container > a {
+  min-height: 2em;
+  border: 2px solid;
+  color: #542e71;
+}
+.profile ul {
+  list-style: square;
+  margin-left: -1rem;
+}
+
+.page-footer {
+  position: relative;
+  padding: 3rem 1rem;
+  background-color: #fb3640;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20010904//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'%3E%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='1280.000000pt' height='936.000000pt' viewBox='0 0 1280.000000 936.000000' preserveAspectRatio='xMidYMid meet'%3E%3Cmetadata%3E%0ACreated by potrace 1.15, written by Peter Selinger 2001-2017%0A%3C/metadata%3E%3Cg transform='translate(0.000000,936.000000) scale(0.100000,-0.100000)'%0Afill='%23000000' stroke='none'%3E%3Cpath d='M4365 9350 c-498 -38 -961 -143 -1415 -322 -173 -68 -518 -240 -683%0A-340 -1240 -752 -2058 -2015 -2231 -3443 -125 -1033 95 -2074 625 -2960 398%0A-664 941 -1210 1606 -1613 165 -100 510 -272 683 -340 214 -84 460 -161 660%0A-207 627 -144 1252 -162 1874 -55 1126 193 2143 796 2860 1694 135 168 317%0A430 305 439 -2 2 -894 559 -1981 1238 -1088 679 -1978 1236 -1978 1239 0 3%0A890 560 1978 1239 1087 679 1979 1236 1981 1238 12 9 -173 275 -314 450 -308%0A384 -671 714 -1087 987 -632 414 -1333 663 -2089 741 -183 19 -625 27 -794 15z'/%3E%3Cpath d='M7652 5286 c-134 -33 -288 -143 -368 -263 -21 -31 -51 -96 -68 -143%0A-26 -74 -30 -99 -30 -195 -1 -122 13 -182 67 -294 41 -85 158 -204 247 -254%0A140 -77 318 -98 470 -56 280 77 476 350 456 637 -6 101 -47 226 -100 305 -83%0A124 -246 238 -384 266 -70 14 -224 13 -290 -3z'/%3E%3Cpath d='M9825 5281 c-275 -80 -454 -316 -455 -598 0 -112 14 -172 65 -279 61%0A-127 152 -218 279 -279 50 -24 115 -48 144 -54 68 -14 196 -14 264 0 73 15%0A203 78 264 127 95 77 176 204 208 329 21 78 21 227 0 307 -57 221 -228 393%0A-451 450 -82 21 -240 20 -318 -3z'/%3E%3Cpath d='M12020 5284 c-169 -44 -323 -169 -399 -324 -93 -190 -93 -370 0 -559%0A51 -103 152 -210 249 -264 184 -101 417 -103 605 -4 86 45 212 174 253 259 53%0A108 76 216 69 323 -10 165 -65 285 -186 406 -60 60 -94 85 -161 117 -47 22%0A-109 45 -138 51 -73 15 -226 13 -292 -5z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat: repeat-x;
+  background-size: 50px 50px;
+  background-position: center -20;
+  color: #a799b7;
+}
+
+.page-footer p:first-child {
+  margin-top: 3rem;
+  font-weight: var(--font-weight-strong);
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.page-footer p a {
+  color: inherit;
+}
+.page-footer ul {
+  grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+}
+.page-footer .container > :last-child {
+  margin-bottom: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: #542e71;
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+}
+
+[class^="link"]:not(.link-codepen) {
+  min-height: 3em;
+  background-color: #fb3640;
+  color: rgb(0, 0, 0);
+  box-shadow: none;
+}
+
+[class^="link"]:not(.link-codepen),
+.profile .container > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75em;
+  transform: translate(0, 0);
+  transition: 180ms all ease-in-out;
+  font-size: 1.125rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+[class^="link"]:not(.link-codepen):hover,
+[class^="link"]:not(.link-codepen):focus,
+.profile .container > a:hover,
+.profile .container > a:focus {
+  transform: translate(-0.15em, -0.15em);
+  box-shadow: none;
+}
+[class^="link"]:not(.link-codepen):focus,
+.profile .container > a:focus {
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.page-footer [class^="link"] {
+  width: 100%;
+  min-height: 2.5em;
+  background-color: #fdca40;
+  color: #fb3640;
+}
+
+.link-codepen {
+  display: block;
+  margin-top: 3rem;
+  font-size: var(--font-size-h4);
+}
+.link-codepen::before {
+  position: absolute;
+  padding-right: 1.25em;
+  color: #6f6ffd;
+  font-size: 0.85em;
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+}
