@@ -196,24 +196,13 @@ header {
   margin-top: 2rem;
 }
 
-@media (max-width: 750px) {
-  header {
-    width: 100%;
-  }
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-}
+
 
 #about {
   border: 0.5em solid #fb3640;
 }
 
 #about ul {
-  margin: 0 auto;
   text-align: center;
   columns: 3;
   column-width: 30%;
@@ -489,4 +478,24 @@ nav ul li {
   width: 1em;
   height: 1em;
   margin-right: 0.25em;
+}
+
+@media (max-width: 750px) {
+  header {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  #about ul {
+    margin: 0 auto;
+    text-align: center;
+    columns: 1;
+    column-width: 70%;
+  }
 }
